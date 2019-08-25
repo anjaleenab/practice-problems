@@ -1,6 +1,6 @@
 ## Sort
 
-Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order. 
+Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order.
 
 - Write a function that takes one parameter
 	- Parameter 1 - An Array of strings

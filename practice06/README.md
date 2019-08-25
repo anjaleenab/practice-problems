@@ -1,6 +1,6 @@
 ## Numeric Spirals
 
-Build a function that takes one parameter and prints out the Fibonacci sequence based on the input parameter. 
+Build a function that takes one parameter and prints out the Fibonacci sequence based on the input parameter.
 
 - Write a function that takes one parameter
 	- Parameter 1 - A number

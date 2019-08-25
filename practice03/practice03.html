@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<script>
+
+var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];
+
+function sortByType(anArray){
+var sortedArray =[];
+var stringArray = [];
+var numberArray =[];
+var booleanArray =[];
+for(var x = 0;x<anArray.length;x++){
+  if (x === anArray.length - 1) {
+  sortedArray.push(stringArray, numberArray, booleanArray);
+  console.log(sortedArray);
+  }
+  var wordType = typeof anArray[x];
+  if(wordType === 'string'){
+    stringArray.push(anArray[x]);
+  } else if(wordType === 'number'){
+    numberArray.push(anArray[x]);
+  } else if(wordType === 'boolean'){
+    booleanArray.push(anArray[x]);
+  }
+}
+}
+
+sortByType(myArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
