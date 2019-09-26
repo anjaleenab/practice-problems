@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function wordMatch(string, arrayOfStrings) {
+    var someArray = [];
+    var entireWord = string.split("");
+    console.log(entireWord);
+    for (var index = 0; index <= arrayOfStrings.length; index++) {
+        if ((arrayOfStrings[index]).includes(entireWord) && !someArray.includes(arrayOfStrings[index])) {
+          someArray.push(arrayOfStrings[index]);
+    }
+     console.log(someArray);
+  }
+}
+
+  var myArray = ['cat', 'caterpillar', 'whale', 'accurate', 'smile', 'cactus', 'cute','turkey', 'elephant'];
+  wordMatch('cat', myArray);
+//NOT COMPLETE
+  </script>
+</head>
+<body>
+
+</body>
+</html>
