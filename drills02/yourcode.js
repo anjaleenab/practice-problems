@@ -46,6 +46,11 @@ for(var x = 0;x<anArray.length;x++){
   return statsObj;
 }
 
-function findMode(){
+function findMode(anArray){
+ for(var i=0;i<anArray.length;i++){
+   for(var x=0;x<anArray.legnth;x++){
+     if(anArray.includes(anArray[x]))
+   }
+ }
 
 }
