@@ -14,38 +14,35 @@ function sumArray(someArray){
 
 
 function fitWithinVal(array, number){
-
-//set a variable to 0
-//add number in each index to the variable that is equal to 0
-//if tempsum var (start at 0) + the next number is equal
-//to the number push those numbers to an array
-//if not add the next number in the array to those numbers
-var placeHolder = 0;
-var sumNumArray = [];
-for(var index=0; index <array.length;index++){
-    if(placeHolder >= number){
-      sumNumArray.push(placeHolder);
-    } else {
-     placeHolder += array[index];
-    }
+var numbersBelow=[];
+var testNum=0;
+for(var index=0; index<array.length;index++) {
+  var measure=testNum + array[index];
+  if(measure <= number) {
+    numbersBelow.push(array[index]);
+    testNum += array[index];
   }
+}
+return numbersBelow;
 }
 
 function getAllNamesShorterThan(anArray, num){
-for(var x;x<anArray.length;x++){
-  var anotherArray =[];
-  if(anArray[x]< num.length){
+  var anotherArray = [];
+for(var x=0;x<anArray.length;x++){
+  if(anArray[x].length< num){
     anotherArray.push(anArray[x]);
     }
-  return anotherArray;
   }
+  return anotherArray;
 }
 
 
 
 
 
-function makeLabel(){
+// function makeLabel(object){
+//   var string = `${object[0][1].greeting} ${object[0].givenName} ${object[0].streetNumber} ${object[0].streetName}
+// ${object[0].city} ${object[0].state} ${object[0].zip}`;
+// return string;
 
-
-}
+// }

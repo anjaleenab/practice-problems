@@ -4,14 +4,23 @@ function getPath(word){
 return word.split("/");
 }
 
-function getPathParts(){
-// var anArray = getPath();
-// var anObj = {
-//   'protocol': anArray[0],
-//   'host'
-//   'port'
-//   'path'
-//   'file'
+function getPathParts(string){
+  debugger;
+  var exp = string;
+  var split = exp.split('/');
+  var protocol = split[0];
+  var sProtocol = protocol.split(':');
+  var correct = split[2];
+  var correctT = correct.split(':');
+  var numT = correctT[0].toInt();
+  var allObj = {
+    "protocol": sProtocol[0],
+    "host": correctT[0],
+    "port": numT,
+    "path": split[3],
+    "file": split[4]
+  };
+  return allObj
 }
 
 function getCapitalCount(anArray){

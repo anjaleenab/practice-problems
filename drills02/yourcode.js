@@ -47,10 +47,12 @@ for(var x = 0;x<anArray.length;x++){
 }
 
 function findMode(anArray){
- for(var i=0;i<anArray.length;i++){
-   for(var x=0;x<anArray.legnth;x++){
-     if(anArray.includes(anArray[x]))
-   }
- }
-
+  var highestCount= null;
+ for(var i=anArray[0];i<anArray.length;i++){
+  var count = anArray.filter(number => number ===anArray[0]);
+  if(count.length> highestCount){
+    highestCount.push(count);
+  }
+  }
+  return highestCount[0];
 }
