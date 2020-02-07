@@ -5,22 +5,36 @@ return word.split("/");
 }
 
 function getPathParts(string){
-  debugger;
   var exp = string;
-  var split = exp.split('/');
-  var protocol = split[0];
-  var sProtocol = protocol.split(':');
-  var correct = split[2];
-  var correctT = correct.split(':');
-  var numT = correctT[0].toInt();
-  var allObj = {
-    "protocol": sProtocol[0],
-    "host": correctT[0],
-    "port": numT,
-    "path": split[3],
-    "file": split[4]
-  };
-  return allObj
+  var stringArray = exp.split('/');
+  var protocol = stringArray[0];
+  var protocolArray = protocol.split(':');
+  var actualProtocol = protocolArray[0];
+  var portArray = stringArray[2].split(':');
+  var localHost =portArray[0];
+  var port = portArray[1];
+  var websiteChars =string.split('');
+  var slashCounter=0;
+  var indexOfSlashThree =null;
+  for(var index=0;index<websiteChars.length;index++) {
+  if(websiteChars[index] === '/') {
+    slashCounter++;
+  }
+  if(slashCounter === 3) {
+    indexOfSlashThree = index;
+    break;
+  }
+  }
+  var path = string.slice(indexOfSlashThree + 1, string.lastIndexOf('/'));
+  var file = string.slice(string.lastIndexOf('/')+1);
+ var object = {
+   protocol: actualProtocol,
+   host: localHost,
+   port: parseInt(port),
+   path: path,
+   file: file
+ }
+ return object;
 }
 
 function getCapitalCount(anArray){
