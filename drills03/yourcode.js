@@ -40,7 +40,7 @@ function getPathParts(string){
 function getCapitalCount(anArray){
 var capitalLetteredWords = [];
 for(var i = 0; i<anArray.length;i++){
-  if(anArray[i].toUpperCase() === anArray[0]){
+  if(anArray[i][0].toUpperCase() === anArray[i][0]){
     capitalLetteredWords.push(anArray[i]);
   }
 }
