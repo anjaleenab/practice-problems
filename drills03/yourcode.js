@@ -47,8 +47,28 @@ for(var i = 0; i<anArray.length;i++){
 return capitalLetteredWords.length;
 }
 
-function correctCalcChecker(){
-
+function correctCalcChecker(objArray){
+  var correctEquations= [];
+  for(var index=0; index<objArray.length;index++) {
+    if (objArray[index].op === '-') {
+      if (objArray[index].num1 - objArray[index].num2 === objArray[index].result) {
+        correctEquations.push(objArray[index]);
+      }
+    } else if (objArray[index].op === '+') {
+      if (objArray[index].num1 + objArray[index].num2 === objArray[index].result) {
+        correctEquations.push(objArray[index]);
+      }
+    } else if (objArray[index].op === '/') {
+      if (objArray[index].num1 / objArray[index].num2 === objArray[index].result) {
+        correctEquations.push(objArray[index]);
+      }
+    } else if (objArray[index].op === '*') {
+      if (objArray[index].num1 * objArray[index].num2 === objArray[index].result) {
+        correctEquations.push(objArray[index]);
+      }
+    }
+  }
+  return correctEquations;
 }
 
 function doMath(anArrayOfObjects){
