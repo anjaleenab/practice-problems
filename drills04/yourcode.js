@@ -53,6 +53,6 @@ var numberOfElements= $(className).length;
 return numberOfElements;
 }
 
-// function removeElements(){
-
-// }
+function removeElements(selector){
+$(selector).remove();
+}
