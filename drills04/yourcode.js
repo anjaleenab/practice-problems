@@ -47,8 +47,11 @@ for(var element=0;element<elements.length;element++) {
 
 }
 
-// function addClass(){
-// }
+function addClass(className, newClassName){
+$(className).addClass(newClassName);
+var numberOfElements= $(className).length;
+return numberOfElements;
+}
 
 // function removeElements(){
 
