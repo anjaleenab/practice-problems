@@ -39,9 +39,13 @@ switch (text) {
 }
 }
 
-// function appendTextToElement(){
+function appendTextToElement(className, word){
+var elements=document.querySelectorAll(className);
+for(var element=0;element<elements.length;element++) {
+  elements[element].innerText += word;
+}
 
-// }
+}
 
 // function addClass(){
 // }
