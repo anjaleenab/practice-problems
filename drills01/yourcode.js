@@ -40,9 +40,10 @@ for(var x=0;x<anArray.length;x++){
 
 
 
-// function makeLabel(object){
-//   var string = `${object[0][1].greeting} ${object[0].givenName} ${object[0].streetNumber} ${object[0].streetName}
-// ${object[0].city} ${object[0].state} ${object[0].zip}`;
-// return string;
+function makeLabel(object){
+  var string = `${object.greeting} ${object.givenName} ${object.familyName}
+${object["home address"].streetNumber} ${object["home address"].streetName}
+${object["home address"].city}, ${object["home address"].state} ${object["home address"].zip}`;
+  return string;
 
-// }
+}
