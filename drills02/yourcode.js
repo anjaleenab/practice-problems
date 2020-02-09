@@ -47,12 +47,31 @@ for(var x = 0;x<anArray.length;x++){
 }
 
 function findMode(anArray){
-  var highestCount= null;
- for(var i=anArray[0];i<anArray.length;i++){
-  var count = anArray.filter(number => number ===anArray[0]);
-  if(count.length> highestCount){
-    highestCount.push(count);
-  }
-  }
-  return highestCount[0];
+  var highestCount= {};
+ for(var i=0;i<anArray.length;i++){
+  highestCount[anArray[i]]=0;
 }
+  for (var num = 0; num < anArray.length; num++) {
+    highestCount[anArray[num]]= highestCount[anArray[num]]+1;
+  }
+  var highestNum=0;
+  var maxKey =[];
+  for(var key in highestCount) {
+    if(highestCount[key] > highestNum){
+      highestNum = highestCount[key];
+      maxKey.push(parseInt(key));
+    } else if(highestCount[key] === highestNum) {
+      maxKey=[];
+      for(var number = anArray.length; number>0; number--) {
+          var firstNum=anArray.lastIndexOf(highestCount[key]);
+          var secondNum = anArray.lastIndexOf(maxKey[0]);
+          if( firstNum > secondNum){
+            maxKey.push(anArray[firstNum]);
+          } else {
+            maxKey.push(anArray[secondNum]);
+          }
+        }
+      }
+    }
+  return maxKey[maxKey.length - 1];
+  }
