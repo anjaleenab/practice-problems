@@ -1,23 +1,27 @@
 
 
-function removeClassFromElement(){
-	
+function removeClassFromElement(element, className){
+$(element).removeClass(className);
 }
 
-function toggleClassOnElement(){
-	
+function toggleClassOnElement(element, className){
+$(element).toggleClass(className);
 }
 
-function hideElements(  ){
-	
+function hideElements(target, removalType){
+if(removalType === 'hide') {
+  $(target).hide();
+} else if (removalType === 'removeChildren') {
+  $(target).children().remove();
+} else if (removalType === 'removeSelf') {
+  $(target).remove();
+}
 }
 
 function addAttributeToElement( ){
-	
+
 }
 
 function putPosInElement(  ){
-	
+
 }
-
-
