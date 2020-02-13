@@ -1,15 +1,21 @@
 
 
 function removeClassFromElement(element, className){
-	$(element).removeClass(className);
+$(element).removeClass(className);
 }
 
 function toggleClassOnElement(element, className){
-$(element).toggle(className);
+$(element).toggleClass(className);
 }
 
-function hideElements(  ){
-
+function hideElements(target, removalType){
+if(removalType === 'hide') {
+  $(target).hide();
+} else if (removalType === 'removeChildren') {
+  $(target).children().remove();
+} else if (removalType === 'removeSelf') {
+  $(target).remove();
+}
 }
 
 function addAttributeToElement( ){
