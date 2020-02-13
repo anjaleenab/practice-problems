@@ -22,6 +22,12 @@ function addAttributeToElement(element, attribute, value ){
 $(element).attr(attribute, value);
 }
 
-function putPosInElement(  ){
-
+function putPosInElement(element){
+var pos =$(element).position();
+var objPos = {
+        "x": pos["top"],
+        "y": pos["left"]
+};
+$(element).html(`x: ${pos["top"]}px<br>y: ${pos["left"]}px`);
+return objPos;
 }
