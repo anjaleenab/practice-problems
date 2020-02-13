@@ -18,8 +18,8 @@ if(removalType === 'hide') {
 }
 }
 
-function addAttributeToElement( ){
-
+function addAttributeToElement(element, attribute, value ){
+$(element).attr(attribute, value);
 }
 
 function putPosInElement(  ){
