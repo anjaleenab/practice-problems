@@ -4,8 +4,8 @@ function removeClassFromElement(element, className){
 	$(element).removeClass(className);
 }
 
-function toggleClassOnElement(){
-
+function toggleClassOnElement(element, className){
+$(element).toggle(className);
 }
 
 function hideElements(  ){
