@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function makeNumObj(array) {
+    var numObj ={};
+    for(var property=0; property<array.length;property++) {
+      var number = array[property];
+     if(!numObj[number]) {
+       numObj[number] = [];
+     }
+     for(var key in numObj) {
+       for (var numberInArr = 0; numberInArr < array.length; numberInArr++) {
+         if (parseInt(key) % array[numberInArr] === 0 && parseInt(key) !== array[numberInArr]
+         && !numObj[key].includes(array[numberInArr])) {
+           numObj[key].push(array[numberInArr]);
+         }
+       }
+     }
+    }
+  }
+
+  makeNumObj([4, 2, 8, 6, 3, 9]);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
