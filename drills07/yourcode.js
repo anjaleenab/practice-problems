@@ -18,10 +18,10 @@ if(removalType === 'hide') {
 }
 }
 
-function testFunction4( ){
-
+function testFunction4(element, attribute, value){
+$(element).attr(attribute, value);
 }
 
-function testFunction5(  ){
-
+function testFunction5(element, attribute, value){
+$(element).attr(attribute, value);
 }
