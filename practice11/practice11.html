@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+  function evenOdds(array) {
+    var obj = {
+      odd: [],
+      even: []
+    }
+    for(var number=0; number<array.length;number++) {
+      if(number % 2 === 0) {
+        obj.even.push(number)
+      } else {
+        obj.odd.push(number);
+      }
+    }
+    console.log(obj);
+    return obj;
+  }
+
+  evenOdds([2, 5, 1, 6, 8, 2, 20, 'cat', 13, 3]);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

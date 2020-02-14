@@ -2,15 +2,15 @@
 
 
 var testVals = [{
-  question: `No function: change yourcss.css to make the 
+  question: `No function: change yourcss.css to make the
   elements have the changes indicated by their text
   `,
   testVals: {
     inputs: [
         [], [], []
     ],
-    outputs:    
-    [  
+    outputs:
+    [
       undefined, undefined, undefined
     ],
     testFunctions: [
@@ -29,8 +29,8 @@ var testVals = [{
             return 'first element should not have an ID'
           }
           return true;
-        }  
-      },  
+        }
+      },
       {
         message: 'the div with a class of makeRed should have red text color',
         test: ()=> {
@@ -46,8 +46,8 @@ var testVals = [{
             return 'second element should not have an ID'
           }
           return true;
-        }  
-      },  
+        }
+      },
       {
         message: 'the third div should have a color of yellow',
         test: ()=> {
@@ -57,7 +57,7 @@ var testVals = [{
           if(target.attr('class') !== undefined){
             return 'third element should only have no classes'
           }
-          
+
           if(target.css('color') !== 'rgb(255, 255, 0)'){
             return 'third element should be green (not lime green) but is not'
           }
@@ -65,12 +65,10 @@ var testVals = [{
             return 'third element should have an id of iShouldBeYellow'
           }
           return true;
-        }  
-      }, 
+        }
+      },
     ]
   },
 
   functionToTest: 'testFunction1'
 }]
-
-
