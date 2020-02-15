@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    //create a for loop
+    // make the number that is passed into the function
+    //be the number that the for loop goes up to
+    //if the number is evenly divisibly by numbers from 1- itself
+    //push the numbers into an array
+    //return the array
+  function findFactors(number) {
+    var divisibles=[];
+    for(var divisible=0; divisible<number;divisible++) {
+      if(number % divisible ===0) {
+        divisibles.push(divisible);
+      }
+    }
+    console.log(divisibles)
+  }
+
+  findFactors(20);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

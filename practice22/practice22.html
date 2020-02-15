@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var peopleList = [
+        { name: 'John', age: 42, gender: 'M' },
+        { name: 'Jack', age: 34, gender: 'M' },
+        { name: 'Michael', age: 40, gender: 'M' },
+        { name: 'Kendra', age: 48, gender: 'F' }
+      ];
+
+function sortByObjects(list, field) {
+  if(field === 'name' || field === 'gender') {
+    list.sort(function(a,b){
+      var nameA = a.name.toLowerCase();
+      var nameB =b.name.toLowerCase();
+      if(nameA < nameB) {
+        return -1;
+      if(nameA > nameB) {
+        return 1;
+      }
+        return 0;
+      }
+    });
+  } else if(field === 'age') {
+    list.sort(function(a, b){
+      return a.age-b.age;
+    });
+  }
+}
+
+sortByObjects(peopleList, 'gender');
+console.log(peopleList);
+sortByObjects(peopleList, 'name');
+console.log(peopleList);
+sortByObjects(peopleList, 'age');
+console.log(peopleList);
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
