@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  //loop through arrayOfObjects
+  //conditionally compare the first letter of each name prop
+  //if the name starts with a letter that's ASCI val is less
+  // than the next save it to a variable
+  //when you have determined that no other names start before that one
+  //push it to an array and move to the next object in the list
+  //sort method can be used
+
+var objList = [
+    { name: 'John', age: 42, gender: 'M' },
+    { name: 'Jack', age: 34, gender: 'M' },
+    { name: 'Michael', age: 40, gender: 'M' },
+    { name: 'Kendra', age: 48, gender: 'F' }
+  ];
+
+  objList.sort(function (a,b) {
+  var nameA=a.name.toLowerCase();
+  var nameB = b.name.toLowerCase();
+  if(nameA < nameB) {
+    return -1; //-1 means A should be before B
+  }
+  if(nameA > nameB) {
+    return 1; //1 means B should be before A
+  }
+  return 0; //a and b are equal
+});
+
+console.log(
+  objList
+);
+
+  </script>
+
+</body>
+</html>
