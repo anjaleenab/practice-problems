@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    //create a helper array variable
+    //use a for loop to loop through and add each array index
+    //to one another
+    //push that value into the helper array
+    //return the helper array variable
+
+    function addArrays(array1, array2) {
+      var arraySums=[];
+      for(var index=0; index<array1.length; index++) {
+        var sum=array1[index] +array2[index];
+        arraySums.push(sum);
+      }
+      console.log(array1, array2, arraySums);
+      return arraySums;
+    }
+
+    addArrays([2,-5,15,4], [3,18,-5,-4]);
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
