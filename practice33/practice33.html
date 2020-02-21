@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    //if parameter is not a number return false
+    //if parameter is a pos number invert it's positivity
+    //if parameter is a neg number invert it's negativity
+
+function invert(number) {
+  if(typeof number !== 'number') {
+    return false;
+  } else if (number >0) {
+    var neg ='-';
+    return parseInt(neg + number);
+  } else {
+    return (number + (number *-2));
+  }
+}
+
+console.log(invert(-5));
+console.log(invert(10));
+console.log(invert('doggy'));
+
+
+
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
