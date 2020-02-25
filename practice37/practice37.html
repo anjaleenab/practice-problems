@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+
+function alternateCaps(string) {
+  var word=string[0];
+  for(var letter =1;letter<string.length;letter++) {
+    if(letter % 2 !==0) {
+      word += string[letter].toUpperCase();
+    } else {
+      word +=string[letter];
+    }
+  }
+  return word;
+}
+
+alternateCaps('testing');
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
